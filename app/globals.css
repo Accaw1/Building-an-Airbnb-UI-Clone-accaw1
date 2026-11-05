@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@theme inline {
+  --color-airbnb: #ff385c;
+  --font-sans: var(--font-geist-sans);
+}
+@layer base {
+  body {
+    @apply bg-white font-sans text-[#222222] antialiased;
+  }
+  button,
+  select {
+    @apply cursor-pointer;
+  }
+  button:disabled {
+    @apply cursor-not-allowed opacity-35;
+  }
+  button,
+  a,
+  input,
+  select {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-airbnb;
+  }
+  ::selection {
+    @apply bg-rose-100;
+  }
+}
